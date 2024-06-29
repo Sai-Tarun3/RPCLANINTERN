@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Login/Signup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="open-popup">Open Popup</button>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2 id="popup-title">Login</h2>
+                <button id="switch-btn" class="switch-btn">Signup</button>
+            </div>
+            <form id="login-form">
+                <input type="email" placeholder="Email" id="email" required>
+                <div class="error-msg" id="email-error"></div>
+                <input type="password" placeholder="Password" id="password" required>
+                <div class="error-msg" id="password-error"></div>
+                <button id="login-btn">Login</button>
+                <p id="login-error"></p>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
