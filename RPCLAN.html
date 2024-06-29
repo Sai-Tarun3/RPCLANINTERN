@@ -11,16 +11,59 @@
     <div id="popup" class="popup">
         <div class="popup-content">
             <div class="popup-header">
-                <h2 id="popup-title">Login</h2>
-                <button id="switch-btn" class="switch-btn">Signup</button>
+                <h2 id="login-title" class="popup-title active">Login</h2>
+                <h2 id="signup-title" class="popup-title">Signup</h2>
             </div>
             <form id="login-form">
-                <input type="email" placeholder="Email" id="email" required>
-                <div class="error-msg" id="email-error"></div>
-                <input type="password" placeholder="Password" id="password" required>
-                <div class="error-msg" id="password-error"></div>
-                <button id="login-btn">Login</button>
-                <p id="login-error"></p>
+                <label for="login-name">Full Name <span class="error-msg" id="login-name-error">*</span></label>
+                <input type="text" id="login-name" placeholder="Enter your user name" required>
+                
+                
+                <label for="login-password">Password <span class="error-msg" id="login-password-error">*</span></label>
+                <div class="password-container">
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                    <span id="toggle-login-password" class="toggle-password">👁️</span>
+                </div>
+                
+                <div class="login-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember-me">
+                        <span class="">Remember Me</span>
+                    </div>
+                    <div class="forgot-password">
+                        <a href="#" class="forgot-password-text">Forgot password?</a>
+                    </div>
+                    
+                </div>
+                <button type="button" id="login-btn">Login</button>
+                <div class="No-Account">
+                    Dont have an Account? <span id="signup-span">SIGN UP</span>
+                </div>
+                <p class="error-msg" id="login-error"></p>
+            </form>
+            <form id="signup-form" class="hidden">
+                <label for="signup-name">Full Name <span class="error-msg" id="signup-name-error">*</span></label>
+                <input type="text" id="signup-name" placeholder="Enter your user name" required>
+                
+                <label for="signup-email">Email <span class="error-msg" id="signup-email-error">*</span></label>
+                <input type="email" id="signup-email" placeholder="Enter your email" required>
+                
+                <label for="signup-password">Enter Password <span class="error-msg" id="signup-password-error">*</span></label>
+                <div class="password-container">
+                    <input type="password" id="signup-password" placeholder="Enter your password" required>
+                    <span id="toggle-signup-password" class="toggle-password">👁️</span>
+                </div>
+                <label for="signup-password">Contact <span class="error-msg" id="signup-contact-error">*</span></label>
+                <div class="contact-container">
+                    <span id="toggle-signup-password" class="toggle-contact">+91 | </span>
+                    <input type="password" id="signup-contact" placeholder="Enter your password" required>
+                </div>
+                
+                <div>
+                    <button id="back-btn" class="back-btn"><img src="./left-arrow.png" class="back-arrow"/> Back</button>
+                    <button id="save-verify-btn">Save & Verify</button>
+                </div>
+                <p id="signup-error"></p>
             </form>
         </div>
     </div>
